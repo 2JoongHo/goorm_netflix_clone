@@ -1,0 +1,9 @@
+.App {
+    background-color: black;
+    min-height: 100vh;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}

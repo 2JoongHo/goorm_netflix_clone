@@ -2,6 +2,7 @@
     color: white;
     object-fit: contain;
     height: 448px;
+    top: 38px;
 }
 @media (min-width: 1500px) {
     .banner {

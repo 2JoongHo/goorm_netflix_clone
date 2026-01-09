@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from '../api/axios';
 import './Row.css';
 
@@ -21,7 +20,12 @@ export default function Row({title, id, fetchUrl, isLargeRow}) {
         <h2>{title}</h2>
         <div className="slider">
             <div className="slider_arrow-left">
-                <span className="arrow">{"<"}</span>
+                <span className="arrow"
+                onClick={() => {
+                    document.getElementById(id).scrollLeft -= window.innerWidth -80;
+                }}>
+                    {"<"}
+                </span>
             </div>
 
             <div id={id} className="row_poster">
@@ -37,7 +41,12 @@ export default function Row({title, id, fetchUrl, isLargeRow}) {
             </div>
 
             <div className="slider_arrow-right">
-                    <span className="arrow">{">"}</span>
+                    <span className="arrow"
+                    onClick={() => {
+                        document.getElementById(id).scrollRight += window.innerWidth -80;
+                    }}>
+                        {">"}
+                    </span>
             </div>
         </div>
     </section>
