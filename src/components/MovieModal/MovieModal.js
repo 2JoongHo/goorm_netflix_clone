@@ -12,9 +12,9 @@ function MovieModal({
   setModalOpen,
 }) {
   return (
-    <div className="presentation">
+    <div className="presentation" onClick={() => setModalOpen(false)}>
       <div className="wrapper-modal">
-        <div className="modal">
+        <div className="modal" onClick={(e) => e.stopPropagation()}>
           <span className="modal-close" onClick={() => setModalOpen(false)}>
             X
           </span>

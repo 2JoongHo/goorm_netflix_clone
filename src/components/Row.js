@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "../api/axios";
 import "./Row.css";
-import MovieModal from "./MovieModal";
+import MovieModal from "./MovieModal/MovieModal";
 
 export default function Row({ title, id, fetchUrl, isLargeRow }) {
   const [movies, setMovies] = useState([]);
