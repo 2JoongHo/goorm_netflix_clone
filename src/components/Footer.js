@@ -31,10 +31,10 @@ const FooterContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 40px 0;
-    border-top: 1px solid rgb(25, 25, 25);
+    border-top: 1px solid rgb(0, 0, 0);
     width: 100%;
     position: relative;
-    z-index: 100;
+    // z-index: 100;
 
     @media (max-width: 768px) {
         padding: 20px 20px;
