@@ -23,10 +23,11 @@ export default function Nav() {
     };
   }, []);
 
+  // 넷플릭스 로고 클릭 시 홈으로 이동하기
   const handleLogoClick = () => {
-    // 홈으로 이동
     navigate("/");
     setSearchValue("");
+    window.scrollTo({top: 0, behavior: "smooth"}); // 맨 위로 자연스럽게 올라가기
   };
 
   const handleChange = (e) => {
