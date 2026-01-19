@@ -1,6 +1,6 @@
 {
   "name": "react-netflix-clone",
-  "homepage":"https://2JoongHo.github.io/goorm_netflix_clone",
+  "homepage": "https://2JoongHo.github.io/goorm_netflix_clone",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

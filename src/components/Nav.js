@@ -27,15 +27,15 @@ export default function Nav() {
   const handleLogoClick = () => {
     navigate("/");
     setSearchValue("");
-    window.scrollTo({top: 0, behavior: "smooth"}); // 맨 위로 자연스럽게 올라가기
+    window.scrollTo({ top: 0, behavior: "smooth" }); // 맨 위로 자연스럽게 올라가기
   };
 
   const handleChange = (e) => {
     const value = e.target.value;
     setSearchValue(value);
-  
+
     if (debounceRef.current) clearTimeout(debounceRef.current);
-  
+
     debounceRef.current = setTimeout(() => {
       // 검색어 비우면 홈으로 이동
       if (value.trim() === "") {
@@ -49,6 +49,7 @@ export default function Nav() {
   return (
     <nav className={`nav ${show ? "nav_black" : ""}`}>
       <div className="nav_left">
+        {/* 넷플릭스 로고 */}
         <img
           className="nav_logo"
           alt="Netflix logo"
@@ -57,6 +58,7 @@ export default function Nav() {
         />
       </div>
 
+      {/* 검색창 */}
       <div className="nav_center">
         <input
           className="nav_input"
@@ -67,6 +69,7 @@ export default function Nav() {
         />
       </div>
 
+      {/* 유저 아이콘 */}
       <div className="nav_right">
         <img
           className="nav_avatar"

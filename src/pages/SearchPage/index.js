@@ -26,7 +26,7 @@ export default function SearchPage() {
     console.log("searchTerm", searchTerm);
     try {
       const request = await axios.get(
-        `/search/multi?include_adult-false&query=${searchTerm}`
+        `/search/multi?include_adult-false&query=${searchTerm}`,
       );
       console.log(request);
       setSearchResults(request.data.results);
@@ -44,7 +44,10 @@ export default function SearchPage() {
               "https://image.tmdb.org/t/p/w500" + movie.backdrop_path;
             return (
               <div className="movie" key={movie.id}>
-                <div onClick={() => navigate(`/${movie.id}`)} className="movie_column-poster">
+                <div
+                  onClick={() => navigate(`/${movie.id}`)}
+                  className="movie_column-poster"
+                >
                   <img
                     src={movieImageUrl}
                     alt="movie"
