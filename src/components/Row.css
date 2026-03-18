@@ -1,6 +1,8 @@
 .row {
   position: relative;
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  margin-left: 0;
+  padding-left: 20px;
   top: 38px;
   color: white;
 }
@@ -62,10 +64,19 @@
 @media screen and (max-width: 768px) {
   .row_poster_item {
     max-height: 100px;
+    transform: none !important; /* ✅ 확대 제거 */
   }
 
   .row_poster_item_Large {
     max-height: 280px;
+    transform: none !important; /* ✅ 확대 제거 */
+  }
+
+  /* swiper 내부에서 튀어나오는 것 차단 */
+  .swiper,
+  .swiper-wrapper,
+  .swiper-slide {
+    overflow-x: hidden !important;
   }
 }
 
